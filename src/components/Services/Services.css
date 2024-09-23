@@ -1,0 +1,53 @@
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    margin-top: 30px;
+    gap: 10px;
+    row-gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.service {
+    background-color: whitesmoke;
+    border-radius: 30px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 70px 0;
+}
+
+.service img {
+    width: 50px;
+    place-self: center;
+    margin-bottom: 10px
+}
+
+.service h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.service p {
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .services {
+        width: 95%;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 625px) {
+    .services {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        place-content: center;
+    }
+
+    .service img {
+        width: 80px;
+    }
+}

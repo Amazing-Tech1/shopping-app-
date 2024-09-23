@@ -1,0 +1,125 @@
+.place-order {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.place-order-left {
+    width: 60%;
+}
+
+.place-order-left .title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: steelblue;
+    font-size: max(1.2vw, 12px);
+}
+
+.place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right {
+    width: 40%;
+}
+
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-total h3 {
+    font-size: 1.5rem;
+    margin-top: 9px;
+    padding-bottom: 24px;
+}
+
+.cart-total-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.cart-total-details span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.685);
+    padding-top: 10px;
+}
+
+.cart-total-details p,
+.cart-total-details b {
+    font-size: 1.1rem;
+}
+
+.cart-total button {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: steelblue;
+    cursor: pointer;
+}
+
+.cart-total button:hover {
+    transform: scale(0.95);
+}
+
+@media (max-width: 900px) {
+    .place-order {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 656px) {
+    .place-order {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .place-order-left {
+        width: 100%;
+    }
+    .place-order-left .title {
+        margin-bottom: 20px;
+    }
+
+    .place-order-right {
+        width: 60%;
+    }
+    .cart-total h3 {
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .cart-total button {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .place-order-right {
+        width: 100%;
+    }
+
+}

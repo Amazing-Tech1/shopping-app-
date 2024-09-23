@@ -1,0 +1,121 @@
+.about {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.about h1 {
+    color: steelblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-top {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+
+.about-top img {
+    min-width: 60%;
+    height: 400px
+}
+
+.about-info p {
+    font-size: 1.5rem;
+}
+
+.our-mission {
+    padding-top: 20px;
+}
+
+.our-mission h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: steelblue;
+}
+
+.our-mission ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.our-mission li {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.why-choose-us {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    color: steelblue;
+}
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin-top: 30px;
+    gap: 10px;
+    row-gap: 20px;
+}
+
+.reason {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 40px 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.reason h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.reason p {
+    font-size: 1.1rem;
+}
+
+@media(max-width: 900px) {
+    .about {
+        max-width: 95%;
+    }
+}
+
+@media(max-width: 750px) {
+    .about {
+        max-width: 95%;
+    }
+
+    .about-info p {
+        font-size: 1.2rem;
+    }
+
+    .our-mission li {
+        font-size: 1rem;
+
+    }
+
+}
+
+@media(max-width: 550px) {
+    .about-top {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .about-top img {
+
+        height: 300px
+    }
+}

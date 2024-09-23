@@ -1,0 +1,205 @@
+.payment-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.payment-page h1 {
+    color: steelblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.payment-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.payment-option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.payment-option label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-details {
+    border: 2px solid rgba(0, 0, 0, 0.534);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.card-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detail label {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-detail input {
+    margin: 5px 0px 15px 0;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: steelblue;
+    font-size: 1.5rem;
+}
+
+.card-detail img {
+    height: 40px;
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+.box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.box .card-detail {
+    width: 100%;
+}
+
+.card-details button {
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    background-color: steelblue;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card-details button:hover {
+    transform: scale(0.98);
+}
+
+.paypal-img {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.paypal-form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+.paypal-form label {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.paypal-form input {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    outline-color: steelblue;
+    padding: 10px;
+
+}
+
+.cod p {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.verify-info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.verify-info label {
+    font-size: 1.5rem;
+}
+
+.verify-info input {
+    font-size: 2rem;
+    padding: 10px;
+    outline-color: steelblue;
+}
+
+.cod-intructions {
+    padding-bottom: 20px;
+}
+
+.cod-intructions ul {
+    list-style-type: disc;
+}
+
+.cod-intructions li {
+    font-size: 1.2rem;
+
+}
+
+@media (max-width:900) {
+    .payment-page {
+        max-width: 95%;
+    }
+
+    input[type="month"] {
+        font-size: 0.85rem;
+    }
+
+}
+
+@media (max-width:410px) {
+    .payment-page h1 {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .card-details {
+        max-width: 100%;
+    }
+
+
+    .payment-options {
+        gap: 10px;
+    }
+
+    .payment-option {
+        display: flex;
+        gap: 5px;
+    }
+
+    .payment-option label {
+        font-size: 0.9rem;
+    }
+
+
+    input[type="month"] {
+        font-size: 0.85rem;
+    }
+
+}
+
+@media (max-width:310px) {
+
+
+    input[type="month"] {
+        font-size: 0.65rem;
+    }
+
+}

@@ -1,0 +1,87 @@
+.subscribe {
+    padding: 50px 0;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.subscribe-content h2 {
+    font-size: 2.5rem;
+    width: 80%;
+    word-wrap: break-word;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.subscribe-content p {
+    font-size: 1.5rem;
+    padding: 15px;
+    text-align: center;
+}
+
+.subscribe-content div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.subscribe-content div input {
+    font-size: 1.5rem;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+.subscribe-content div button {
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .subscribe {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 640px) {
+    .subscribe-content h2 {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .subscribe-content p {
+        font-size: 1rem;
+
+    }
+
+    .subscribe-content div input,
+    .subscribe-content div button {
+        font-size: 1.2rem;
+    }
+
+    .subscribe-content div input {
+        min-width: 200px;
+    }
+}
+@media (max-width: 400px){
+    .subscribe-content h2 {
+        font-size: 1.5rem;
+    }
+    .subscribe-content p {
+        font-size: 0.8rem;
+    }
+    .subscribe-content div input,
+    .subscribe-content div button {
+        font-size: 1rem;
+    }
+    .subscribe-content div input {
+        min-width: 0px;
+    }
+
+}
