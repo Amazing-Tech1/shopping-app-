@@ -6,12 +6,12 @@ import { assets } from '../../assets/assets'
 function About() {
     return (
         <div className='about'>
-            <h1>ABOUT US</h1>
             <div className="about-top">
                 <img src={assets.about_img} alt="" />
                 <div className="about-info">
+                    <h1>ABOUT US</h1>
                     <p>Shopping Mall was founded in 2024 with a vision to make shopping easy for customers. Our team of experts is dedicated to providing clothing materials that meet the highest standards of quality and customer satisfaction.</p>
-                    <div class="our-mission">
+                    <div className="our-mission">
                         <h2>Our Mission</h2>
                         <p>At Shopping Mall, our mission is to provide quality clothing materials. We strive to:</p>
                         <ul>

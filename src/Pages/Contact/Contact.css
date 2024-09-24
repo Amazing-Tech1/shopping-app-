@@ -9,12 +9,12 @@
 
 .contact img {
     width: 100%;
-    flex-basis: 45%;
+    flex-basis: 50%;
     height: 500px;
 }
 
 form {
-    flex-basis: 55%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
 }

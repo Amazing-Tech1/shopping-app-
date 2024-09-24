@@ -6,8 +6,8 @@
 
 .about h1 {
     color: steelblue;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0;
+
 }
 
 .about-top {
@@ -115,7 +115,7 @@
     }
 
     .about-top img {
-
+        margin-top: 20px;
         height: 300px
     }
 }
