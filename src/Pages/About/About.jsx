@@ -22,25 +22,25 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div class="why-choose-us">
+            <div className="why-choose-us">
                 <h2>Why Choose Us?</h2>
-                <div class="reasons">
-                    <div class="reason">
+                <div className="reasons">
+                    <div className="reason">
                         <FaCheckCircle size={50} color='#007bff' />
                         <h3>Expertise</h3>
                         <p>Our team has years of experience in marketing.</p>
                     </div>
-                    <div class="reason">
+                    <div className="reason">
                         <FaClock size={50} color='#008080' />
                         <h3>Timely Delivery</h3>
                         <p>We deliver high-quality solutions on time, every time.</p>
                     </div>
-                    <div class="reason">
+                    <div className="reason">
                         <FaThumbsUp size={50} color='#2ecc71' />
                         <h3>Customer Satisfaction</h3>
                         <p>We prioritize customer satisfaction and feedback.</p>
                     </div>
-                    <div class="reason">
+                    <div className="reason">
                         <FaLock size={50} color='#ff9900' />
                         <h3>Security and Reliability</h3>
                         <p>We ensure the security and reliability of our products/services.</p>
