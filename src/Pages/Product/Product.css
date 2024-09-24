@@ -178,30 +178,37 @@
     }
 
 }
+
 @media (max-width: 750px) {
 
     .product-container {
         flex-direction: column;
     }
+
     .product-img-left img {
         width: 70px;
         height: 70px;
     }
-    
+
     .product-img-right {
         flex-grow: 1;
     }
-    
+
     .product-img-right img {
         width: 100%;
         height: 340px
     }
 }
+
 @media (max-width: 594px) {
 
     .product-header {
         padding: 15px;
         font-size: 2rem;
+    }
+
+    .related-products h1 {
+        font-size: 14px;
     }
 }
 
