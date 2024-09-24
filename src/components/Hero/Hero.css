@@ -9,7 +9,7 @@
 
 .slides {
     position: relative;
-    height: 70vh;
+    height: 500px;
 }
 
 .slide-content {
@@ -65,7 +65,7 @@
 @media (max-width:750px) {
 
     .slides {
-        height: 50vh;
+        height: 350px;
     }
 
     .slide-content h2 {

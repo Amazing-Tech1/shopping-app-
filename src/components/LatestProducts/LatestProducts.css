@@ -83,15 +83,16 @@
 }
 
 @media (max-width: 484px) {
-    .product-cards{
+    .product-cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         margin-bottom: 20px;
         gap: 10px;
         row-gap: 20px;
     }
+
     .product-card h3,
     .product-card h4 {
-        font-size: 7px;
+        font-size: 5px;
     }
 }

@@ -64,6 +64,7 @@
     align-items: center;
     background-color: #eaeaea;
     border-radius: 4px;
+    height: 50px;
 
 }
 
@@ -83,13 +84,15 @@
     color: whitesmoke;
     border: none;
     border-radius: 8px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    height: 100%;
+    margin-top: -2px;
 }
 
 @media(max-width:535px) {
     .cart-total-container {
-        width: 60%;
+        width: 100%;
     }
 
     .cart-promocode {
@@ -99,13 +102,13 @@
 
 }
 @media(max-width:356px) {
-    .cart-total-container {
-        width: 100%;
-    }
 
     .cart-promocode {
-        margin-top: 40px;
         width: 100%;
     }
+    .cart-total-container button {
+        font-size: 1rem;
+    }
+    
 
 }

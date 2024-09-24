@@ -82,8 +82,13 @@
         width: 50px;
     }
 
-    .detail p {
-        font-size: 1rem;
+    .detail p,
+    .detail-price p {
+        font-size: 0.5rem;
+    }
+    .cart-details input{
+        width: 20px;
+        font-size: 0.5rem;
     }
 }
 
