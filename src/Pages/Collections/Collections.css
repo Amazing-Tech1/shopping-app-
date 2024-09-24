@@ -179,6 +179,7 @@
     .category-filters {
         margin-bottom: -30px;
     }
+
     .exclusive-content h2 {
         font-size: 5rem;
     }
@@ -187,11 +188,18 @@
 
 
 @media (max-width: 484px) {
+    .cat-content {
+        font-size: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
     .sort select {
         font-size: 12px;
         padding: 8px;
     }
-    
+
     .collection-cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
