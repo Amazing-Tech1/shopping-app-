@@ -38,7 +38,7 @@ function Navbar() {
                 {showMenu ? <img src={assets.cross_icon} alt="" className="menu-icon" /> : <img src={assets.menu_icon} alt="" className="menu-icon" />}
             </div>
             {showMenu === true ?
-                <div className="menu">
+                <div className="menu" style={{ animation: showMenu ? "slideIn 1s" : "slideOut 1s forwards" }} >
                     <ul>
                         <Link to="/" onClick={() => setShowMenu(false)}><li>Home</li></Link>
                         <Link to="/login" onClick={() => setShowMenu(false)}><li>Login</li></Link>

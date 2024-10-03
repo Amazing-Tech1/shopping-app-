@@ -105,7 +105,7 @@ function Collections() {
                     <input type="checkbox" value={"Topwear"} onChange={toggleSubCategory} /> Topwear
                   </p>
                   <p className="cat-content">
-                    <input type="checkbox" value={"Bottomwear"} onChange={toggleSubCategory} /> bottomwear
+                    <input type="checkbox" value={"Bottomwear"} onChange={toggleSubCategory} /> Bottomwear
                   </p>
                   <p className="cat-content">
                     <input type="checkbox" value={"Winterwear"} onChange={toggleSubCategory} /> Winterwear

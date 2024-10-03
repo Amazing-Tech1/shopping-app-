@@ -46,9 +46,12 @@
     display: flex;
     gap: 10px;
     justify-content: center;
-    align-items: first baseline;
 }
-
+.cat-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 .filt-header img {
     width: 10px;
@@ -116,7 +119,7 @@
 
 .exclusive {
     position: relative;
-    height: 40vh;
+    height: 300px;
     background: linear-gradient(to bottom, #FFC07F, whitesmoke);
     overflow: hidden;
 }
@@ -212,6 +215,11 @@
     .collection-card h4 {
         font-size: 0.5rem;
     }
+
+    .exclusive {
+        height: 200px;
+    }
+    
 
     .exclusive-content h2 {
         font-size: 2rem;
