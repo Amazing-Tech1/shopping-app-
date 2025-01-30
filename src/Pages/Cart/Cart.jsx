@@ -3,32 +3,27 @@ import './Cart.css'
 import { ShopContext } from '../../ShopContext'
 import { assets } from '../../assets/assets';
 import CartTotal from '../../components/CartTotal/CartTotal';
-import { AuthContext } from '../../AuthContext';
 
 function Cart() {
     const { products, cartItems, deleteFromCart, updateQuantity } = useContext(ShopContext);
-    const { isAuth } = useContext(AuthContext);
 
     const [cartData, setCartData] = useState([]);
 
     useEffect(() => {
-        if (isAuth) {
-            if (products.length > 0) {
-                const tempData = [];
-                for (const items in cartItems) {
-                    for (const item in cartItems[items]) {
-                        if (cartItems[items][item] > 0) {
-                            tempData.push({
-                                _id: items,
-                                size: item,
-                                quantity: cartItems[items][item]
-                            })
-                        }
+        if (products.length > 0) {
+            const tempData = [];
+            for (const items in cartItems) {
+                for (const item in cartItems[items]) {
+                    if (cartItems[items][item] > 0) {
+                        tempData.push({
+                            _id: items,
+                            size: item,
+                            quantity: cartItems[items][item]
+                        })
                     }
                 }
-                setCartData(tempData);
             }
-
+            setCartData(tempData);
         }
 
     }, [cartItems, products])
