@@ -76,9 +76,13 @@ import about_img from './about_img.png'
 import contact_img from './contact_img.png'
 import cross_icon from './cross_icon.png'
 import cod from './cod.png'
+import profile from './profile.png'
+import login from './login.png'
 
 export const assets = {
     logo,
+    profile,
+    login,
     hero1,
     hero2,
     hero3,

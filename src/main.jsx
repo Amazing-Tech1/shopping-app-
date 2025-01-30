@@ -3,12 +3,15 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import ShopContextProvider from './ShopContext.jsx'
+import AuthProvider from './AuthContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <ShopContextProvider>
-      <App />
-    </ShopContextProvider>
+    <AuthProvider>
+      <ShopContextProvider>
+        <App />
+      </ShopContextProvider>
+    </AuthProvider>
   </BrowserRouter>
 
 

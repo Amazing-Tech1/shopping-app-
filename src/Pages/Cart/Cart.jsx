@@ -5,25 +5,29 @@ import { assets } from '../../assets/assets';
 import CartTotal from '../../components/CartTotal/CartTotal';
 
 function Cart() {
-    const { products, cartItems, deleteFromCart } = useContext(ShopContext);
+    const { products, cartItems, deleteFromCart, updateQuantity } = useContext(ShopContext);
 
     const [cartData, setCartData] = useState([]);
 
     useEffect(() => {
-        const tempData = [];
-        for (const items in cartItems) {
-            for (const item in cartItems[items]) {
-                if (cartItems[items][item] > 0) {
-                    tempData.push({
-                        _id: items,
-                        size: item,
-                        quantity: cartItems[items][item]
-                    })
+
+        if (products.length > 0) {
+            const tempData = [];
+            for (const items in cartItems) {
+                for (const item in cartItems[items]) {
+                    if (cartItems[items][item] > 0) {
+                        tempData.push({
+                            _id: items,
+                            size: item,
+                            quantity: cartItems[items][item]
+                        })
+                    }
                 }
             }
+            setCartData(tempData);
         }
-        setCartData(tempData);
-    }, [cartItems])
+
+    }, [cartItems, products])
     return (
         <div className="cart-product">
             <h1>YOUR CART</h1>
@@ -42,8 +46,8 @@ function Cart() {
                                     </p>
                                 </div>
                             </div>
-                            <input type="number" min={1} defaultValue={p.quantity} onChange={(e) => e.target.value === "" || e.target.value === "0" ? null : deleteFromCart(p._id, p.size, Number(e.target.value))} />
-                            <img src={assets.bin_icon} alt="" className='del-btn' onClick={() => deleteFromCart(p._id, p.size, 0)} />
+                            <input type="number" min={1} defaultValue={p.quantity} onChange={(e) => e.target.value === "" || e.target.value === "0" ? null : updateQuantity(p._id, p.size, Number(e.target.value))} />
+                            <img src={assets.bin_icon} alt="" className='del-btn' onClick={() => updateQuantity(p._id, p.size, 0)} />
                         </div>
                     )
                 })

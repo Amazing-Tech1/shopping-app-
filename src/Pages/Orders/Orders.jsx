@@ -1,132 +1,86 @@
-import React, { useContext, useState } from 'react'
-import './Orders.css'
-import { ShopContext } from '../../ShopContext'
-import { assets } from '../../assets/assets'
+import React, { useContext, useEffect, useState } from 'react';
+import './Orders.css';
+import { ShopContext } from '../../ShopContext';
+import axios from '../../../axios';
+import { AuthContext } from '../../AuthContext';
 
 function Orders() {
-    const { formData, handleFormChange } = useContext(ShopContext)
-    const [paymentMethod, setPaymentMethod] = useState("credit/debit card")
-    function handleMethodChange(e) {
-        setPaymentMethod(e.target.value)
+    const { products } = useContext(ShopContext);
+    const { isAuth } = useContext(AuthContext)
+    const [orderData, setOrderData] = useState([])
+
+    async function getUsersOrders() {
+        try {
+            const response = await axios.get('/order/userorders', {
+                headers: {
+                    'Content-Type': 'application/json',
+                }, withCredentials: true
+            })
+            if (response.data.success) {
+                let allOrdersItem = []
+                response.data.orders.map((order) => {
+                    order.items.map((item) => {
+                        item['status'] = order.status
+                        item['payment'] = order.payment
+                        item['paymentMethod'] = order.paymentMethod
+                        item['date'] = order.date
+                        allOrdersItem.push(item)
+                    })
+                })
+                console.log(allOrdersItem)
+                setOrderData(allOrdersItem.reverse())
+            }
+            else {
+                console.log("Expected 'orders' to be an array, but it was not.");
+            }
+        } catch (error) {
+
+        }
     }
+    useEffect(() => {
+        if (isAuth) {
+            getUsersOrders();
+        }
+    }, [isAuth])
+
+
 
     return (
-        <div className='payment-page'>
-            <h1>PAYMENT METHODS</h1>
-            <div className="payment-options">
-                <div className='payment-option'>
-                    <input type="radio" id='credit-debit-card' name='payment-method' value="credit/debit card" onChange={handleMethodChange} checked={paymentMethod === "credit/debit card"} />
-                    <label htmlFor="credit-debit-card">Debit Card</label>
-                </div>
-                <div className='payment-option'>
-                    <input type="radio" id='paypal' name='payment-method' value="paypal" onChange={handleMethodChange} checked={paymentMethod === "paypal"} />
-                    <label htmlFor="paypal">PayPal</label>
-                </div>
-                <div className='payment-option'>
-                    <input type="radio" id='cash-on-delivery' name='payment-method' value="cod" onChange={handleMethodChange} checked={paymentMethod === "cod"} />
-                    <label htmlFor="cash-on-delivery">Cash on Delivery</label>
-                </div>
+        <div className='orders'>
+            <h1>MY ORDERS</h1>
+            <div className='order-list'>
+                {orderData.map((p, index) => (
+                    <div key={index} className='order-container'>
+                        <div className='order-image-cont'>
+                            <img src={p.image[0]} alt={p.name} className='order-image' />
+                        </div>
+
+                        <div className='order-details'>
+                            <p className='order-name'>{p.name}</p>
+                            <div className='order-info'>
+                                <p className='order-price'>${p.price}</p>
+                                <p className='order-quantity'>Quantity: {p.quantity}</p>
+                                <p className='order-size'>Size: {p.size}</p>
+                            </div>
+                            <p className='order-date'>
+                                Date: <span>{new Date(p.date).toDateString()}</span>
+                            </p>
+                            <p className='order-date'>
+                                Payment: <span>{p.paymentMethod}</span>
+                            </p>
+                        </div>
+                        <div className='order-status'>
+                            <div className='status-container'>
+                                <span className='status-dot'></span>
+                                <p className='status-text'>{p.status }</p>
+                            </div>
+                            <button className='track-order-btn' onClick={getUsersOrders}>Track Order</button>
+                        </div>
+                    </div>
+                ))}
             </div>
-
-            {paymentMethod === 'credit/debit card' && (
-                <form className='card-details'>
-                    <div className='card-detail'>
-                        <label>Card Holder's Name </label>
-                        <input
-                            type="text"
-                            name="cardHolderName"
-                            value={formData.cardHolderName}
-                            onChange={handleFormChange}
-                            required
-                        />
-                    </div>
-                    <div className='card-detail'>
-                        <label>Card Number</label>
-                        <input
-                            type="number"
-                            name="cardNumber"
-                            value={formData.cardNumber}
-                            onChange={handleFormChange}
-                            required
-                        />
-                        <img src={assets.cards} alt="" />
-                    </div>
-                    <div className='box'>
-                        <div className='card-detail'>               <label>Expiration</label>
-                            <input
-                                type="month"
-                                name="expirationDate"
-                                value={formData.expirationDate}
-                                onChange={handleFormChange}
-                                required
-                            />
-                        </div>
-                        <div className='card-detail'>
-                            <label>CVV</label>
-                            <input
-                                type="number"
-                                name="cvv"
-                                value={formData.cvv}
-                                onChange={handleFormChange}
-                                required
-                            />
-                        </div>
-                    </div>
-
-                    <button type="submit">Pay Now</button>
-                </form>
-            )}
-            {
-                paymentMethod === 'paypal' && (
-                    <form className="card-details">
-                        <img src={assets.paypal} alt="" className='paypal-img' />
-                        <div className='paypal-form'>
-                            <label htmlFor="paypal">PayPal Email</label>
-                            <input type="email" name="paypal" required />
-                        </div>
-                        <button type="submit">Pay Now</button>
-                    </form>
-                )
-            }
-            {
-                paymentMethod === 'cod' && (
-                    <form className="card-details cod ">
-                        <img src={assets.cod} alt="" className='paypal-img' />
-                        <p>Please verify your delivery information:</p>
-                        <div className='verify-info'>
-                            <label htmlFor="">First Name</label>
-                            <input type="text" name="firstName" id="first Name" value={formData.firstName} readOnly />
-                        </div>
-                        <div className='verify-info'>
-                            <label htmlFor="lastName">Last Name</label>
-                            <input type="text" name="LastName" id="last Name" value={formData.lastName} readOnly />
-                        </div>
-                        <div className='verify-info'>
-                            <label htmlFor="address">Address</label>
-                            <input type="text" name="address" id="address" value={formData.address} readOnly />
-                        </div>
-                        <div className='verify-info'>
-                            <label htmlFor="phone">Phone No</label>
-                            <input type="number" name="phoneNumber" id="phoneNumber" value={formData.phoneNumber} readOnly />
-                        </div>
-
-                        <div className='cod-intructions'>
-                            <p>Payment Instructions:</p>
-                            <ul>
-                                <li>Please pay the delivery personnel upon receipt of your order</li>
-                                <li>Accepted payment method is Cash only!</li>
-                            </ul>
-                        </div>
-
-                        <button type="submit">Confirm COD Order</button>
-                    </form>
-                )
-            }
-
-
-
         </div>
-    )
+    );
 }
 
-export default Orders
+export default Orders;

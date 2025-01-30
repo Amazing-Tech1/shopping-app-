@@ -11,8 +11,10 @@ import Cart from "./Pages/Cart/Cart"
 import Login from "./Pages/Login/Login"
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder"
 import Orders from "./Pages/Orders/Orders"
+import VerifyPayment from "./Pages/VerifyPayment/VerifyPayment"
 import SearchBar from "./components/SearchBar/SearchBar"
 import Footer from "./components/Footer/Footer"
+import ProtectedRoutes from './components/ProtectedRoutes'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { ToastContainer, toast } from 'react-toastify';
@@ -32,15 +34,18 @@ function App() {
       <Navbar />
       <SearchBar />
       <Routes>
+        <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
-        <Route path="/collections" element={<Collections />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/product/:id" element={<Product />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/placeorder" element={<PlaceOrder />} />
-        <Route path="/orders" element={<Orders />} />
+        <Route path="/collections" element={<Collections />} />
+        <Route path="/verify" element={<VerifyPayment />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/placeorder" element={<PlaceOrder />} />
+          <Route path="/orders" element={<Orders />} />
+        </Route>
       </Routes>
       <Footer />
     </div>

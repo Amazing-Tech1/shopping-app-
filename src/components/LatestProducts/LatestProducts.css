@@ -30,7 +30,7 @@
 
 .product-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     margin-bottom: 20px;
     gap: 10px;
     row-gap: 20px;
@@ -59,7 +59,10 @@
 }
 
 .product-card h3 {
-    font-size: 12px;
+    font-size: 10px;
+}
+.product-card h4 {
+    font-size: 10px;
 }
 
 @media (max-width: 900px) {
@@ -85,14 +88,14 @@
 @media (max-width: 484px) {
     .product-cards {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
         margin-bottom: 20px;
         gap: 10px;
         row-gap: 20px;
     }
+.product-card-details{
+    display: flex;
+    justify-content: space-between;
+}
 
-    .product-card h3,
-    .product-card h4 {
-        font-size: 5px;
-    }
 }

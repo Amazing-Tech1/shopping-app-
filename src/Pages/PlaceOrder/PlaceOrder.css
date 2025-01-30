@@ -69,19 +69,37 @@
     font-size: 1.1rem;
 }
 
-.cart-total button {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    padding: 10px;
+
+.payment {
+    width: 100%;
+}
+
+.payment h1 {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 20px;
+}
+
+.payment-options {
+    display: flex;
+    gap: 20px;
+}
+
+.payment-option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 0.5px solid gray;
     border-radius: 10px;
-    color: white;
-    background-color: steelblue;
-    cursor: pointer;
+    box-shadow: 2px 2px 5px grey;
+    padding: 10px;
+    font-size: 1.2rem;
 }
 
 .cart-total button:hover {
     transform: scale(0.95);
 }
+
 
 @media (max-width: 900px) {
     .place-order {
@@ -89,7 +107,7 @@
     }
 }
 
-@media (max-width: 656px) {
+@media (max-width: 664px) {
     .place-order {
         display: flex;
         flex-direction: column;
@@ -100,6 +118,7 @@
     .place-order-left {
         width: 100%;
     }
+
     .place-order-left .title {
         margin-bottom: 20px;
     }
@@ -107,9 +126,14 @@
     .place-order-right {
         width: 60%;
     }
+
     .cart-total h3 {
         margin-top: 0px;
         padding-bottom: 0px;
+    }
+
+    .placeorder-btn {
+        justify-content: center;
     }
 
     .cart-total button {
@@ -122,4 +146,7 @@
         width: 100%;
     }
 
+    /* .payment-options {
+        flex-direction: column;
+    } */
 }

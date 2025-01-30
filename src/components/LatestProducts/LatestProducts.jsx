@@ -10,7 +10,7 @@ function LatestProducts() {
 
     useEffect(() => {
         setLatestProduct(products.slice(0, 10))
-    }, [])
+    }, [products])
     return (
         <div className='latest-products'>
             <div className="latest-header">
@@ -25,8 +25,11 @@ function LatestProducts() {
                         <div className='product-card-img'>
                             <Link to={`product/${product._id}`}> <img src={product.image[0]} alt="" /></Link>
                         </div>
-                        <h3>{product.name}</h3>
-                        <h4>${product.price}</h4>
+                        <div className='product-card-details'>
+                            <h3>{product.name}</h3>
+                            <h4>${product.price}</h4>
+                        </div>
+
 
                     </ul>
                 ))}

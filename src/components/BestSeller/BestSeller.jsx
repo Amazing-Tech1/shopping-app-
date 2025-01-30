@@ -10,7 +10,7 @@ function BestSeller() {
 
     useEffect(() => {
         setBestSeller(bestProduct.slice(0, 5))
-    }, [])
+    }, [products])
 
     return (
         <div className='latest-products'>
@@ -27,8 +27,11 @@ function BestSeller() {
                                 <img src={product.image[0]} alt="" />
                             </Link>
                         </div>
-                        <h3>{product.name}</h3>
-                        <h4>${product.price}</h4>
+                        <div className='product-card-details'>
+                            <h3>{product.name}</h3>
+                            <h4>${product.price}</h4>
+                        </div>
+
                     </ul>
                 ))}
             </div>
