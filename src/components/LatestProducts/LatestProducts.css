@@ -63,6 +63,7 @@
 }
 .product-card h4 {
     font-size: 10px;
+    color: steelblue;
 }
 
 @media (max-width: 900px) {

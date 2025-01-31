@@ -116,6 +116,9 @@
 .collection-card h4 {
     font-size: 1.1rem;
 }
+.collection-card h4{
+    color: steelblue;
+}
 
 .exclusive {
     position: relative;
