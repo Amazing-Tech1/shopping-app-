@@ -10,11 +10,13 @@
 }
 .cart-container{
     width:100%;
+    border: 1px solid black;
 }
 
 
 .cart-detail.container{
     margin: 10px;
+    border: 1px solid black;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  
     width:100%;
 }  
@@ -24,7 +26,8 @@
     gap: 16px;
     padding: 16px;
     width: 100%; 
-    min-width: 100%;   
+    min-width: 100%; 
+    border: 1px solid black;  
   }
 
   .cart-detail-img {
