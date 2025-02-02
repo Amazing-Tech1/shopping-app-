@@ -56,23 +56,20 @@
 
 .detail-price {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 25px;
     font-size: 14px;
     color: #555;
 }
 
 .detail-right {
     display: flex;
-    flex-direction: column; /* Stack input and delete button vertically */
-    gap: 5px;
-    align-items: center; /* Center items horizontally */
+    gap: 10px;
 }
 
 .detail-right input {
     width: 50px;
     height: 50px;
-    padding: 6px;
+    padding: 2px;
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -92,7 +89,7 @@
     opacity: 1;
     cursor: pointer;
     transition: opacity 0.2s ease, transform 0.1s ease;
-    transform: scale(1.1); /* Slightly increase size on hover */
+    transform: scale(1.1); 
 }
 
 @media (max-width: 900px) {
