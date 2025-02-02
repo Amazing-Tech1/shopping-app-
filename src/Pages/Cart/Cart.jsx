@@ -34,9 +34,9 @@ function Cart() {
                 {cartData.map((p, index) => {
                     const productData = products.find((product) => product._id === p._id);
                     return (
-                        <div className='cart-detail-container'>
                             <div className='cart-details' key={index}>
                                 <img src={productData.image[0]} alt="" className='cart-detail-img' />
+                                <div className='cart-detail-container'>
                                 <div className='cart-detail'>
                                     <div className="detail">
                                         <p className='detail-name'>{productData.name}</p>
@@ -53,8 +53,11 @@ function Cart() {
                                         <img src={assets.bin_icon} alt="" className='del-btn' onClick={() => updateQuantity(p._id, p.size, 0)} />
                                     </div>
                                 </div>                           
+                                </div>
+
+
                             </div>
-                        </div>
+                        
                     )
                 })
                 }
