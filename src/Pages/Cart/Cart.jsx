@@ -45,6 +45,7 @@ function Cart() {
                                                     {p.size}
                                                 </p>
                                             </div>
+                                    </div>
                                     <div className='detail-right'>
                                             <input type="number" min={1} defaultValue={p.quantity} onChange={(e) => e.target.value === "" || e.target.value === "0" ? null : updateQuantity(p._id, p.size, Number(e.target.value))} />
                                                 
@@ -52,10 +53,6 @@ function Cart() {
                                         </div>
                                     </div>                           
                                 </div>
-
-
-                            </div>
-                        
                     )
                 })
                 }

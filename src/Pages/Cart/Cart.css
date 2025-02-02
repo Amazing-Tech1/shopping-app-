@@ -55,13 +55,14 @@
 
 .detail-price {
     display: flex;
-    gap: 25px;
+    justify-content: space-between;
     font-size: 14px;
     color: #555;
 }
 
 .detail-right {
     display: flex;
+    justify-content: space-between;
     gap: 10px;
     align-items: center;
 }
