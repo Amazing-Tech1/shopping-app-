@@ -34,7 +34,7 @@ function Cart() {
                 {cartData.map((p, index) => {
                     const productData = products.find((product) => product._id === p._id);
                     return (
-                        <div className='cart-detail.container'>
+                        <div className='cart-detail-container'>
                             <div className='cart-details' key={index}>
                                 <img src={productData.image[0]} alt="" className='cart-detail-img' />
                                 <div className='cart-detail'>
