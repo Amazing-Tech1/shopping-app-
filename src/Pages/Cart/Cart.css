@@ -20,11 +20,10 @@
 }  
   .cart-details {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-columns: 1fr 3fr 1fr; 
     gap: 16px;
-    padding: 16px;
+    padding: 10px;
     width: 100%; 
-    min-width: 100%; 
     box-sizing: border-box;
   }
 
