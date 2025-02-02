@@ -25,7 +25,7 @@
     padding: 16px;
     width: 100%; 
     min-width: 100%; 
-    border: 1px solid black;  
+    box-sizing: border-box;
   }
 
   .cart-detail-img {
@@ -53,7 +53,7 @@
   .detail-name {
     font-size: 25px;
     font-weight: bold;
-    margin: 0;
+  
   }
   
   .detail-price {
