@@ -38,7 +38,7 @@ function Cart() {
                             <img src={productData.image[0]} alt="" className='cart-detail-img' />
                             <div className='cart-detail'>
                                 <div className="detail">
-                                    <p>{productData.name}</p>
+                                    <p className='detail-name'>{productData.name}</p>
                                     <div className='detail-price'>
                                         <p>NGN {productData.price}</p>
                                         <p>
@@ -46,10 +46,11 @@ function Cart() {
                                         </p>
                                     </div>
                                 </div>
-                               
-                                <input type="number" min={1} defaultValue={p.quantity} onChange={(e) => e.target.value === "" || e.target.value === "0" ? null : updateQuantity(p._id, p.size, Number(e.target.value))} />
-                                    
-                                <img src={assets.bin_icon} alt="" className='del-btn' onClick={() => updateQuantity(p._id, p.size, 0)} />
+                               <div className='detail-right'>
+                                    <input type="number" min={1} defaultValue={p.quantity} onChange={(e) => e.target.value === "" || e.target.value === "0" ? null : updateQuantity(p._id, p.size, Number(e.target.value))} />
+                                        
+                                    <img src={assets.bin_icon} alt="" className='del-btn' onClick={() => updateQuantity(p._id, p.size, 0)} />
+                                </div>
                             </div>                           
                         </div>
                     )
