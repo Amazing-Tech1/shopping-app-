@@ -53,17 +53,17 @@ function PlaceOrder() {
                         <div>
                             <div className='cart-total-details'>
                                 <span>SubTotal</span>
-                                <p>${getCartAmount()}.00</p>
+                                <p>NGN {getCartAmount()}.00</p>
                             </div>
                             <hr />
                             <div className='cart-total-details'>
                                 <span>Shipping Fee</span>
-                                <p>${getCartAmount() === 0 ? 0 : 10}.00</p>
+                                <p>NGN {getCartAmount() === 0 ? 0 : 150}.00</p>
                             </div>
                             <hr />
                             <div className='cart-total-details'>
                                 <span>Total</span>
-                                <b>${getCartAmount() === 0 ? 0 : getCartAmount() + 10}.00</b>
+                                <b>NGN {getCartAmount() === 0 ? 0 : getCartAmount() + 153}.00</b>
                             </div>
                         </div>
                     </div>

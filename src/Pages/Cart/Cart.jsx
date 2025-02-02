@@ -39,7 +39,7 @@ function Cart() {
                             <div className="detail">
                                 <p>{productData.name}</p>
                                 <div className='detail-price'>
-                                    <p>${productData.price}</p>
+                                    <p>NGN {productData.price}</p>
                                     <p>
                                         {p.size}
                                     </p>

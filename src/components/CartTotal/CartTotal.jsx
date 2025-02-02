@@ -14,17 +14,17 @@ function CartTotal() {
                 <div>
                     <div className='totals'>
                         <span>SubTotal</span>
-                        <p>${getCartAmount()}.00</p>
+                        <p>NGN {getCartAmount()}.00</p>
                     </div>
                     <hr />
                     <div className='totals'>
                         <span>Shipping Fee</span>
-                        <p>${getCartAmount() === 0 ? 0 : 10}.00</p>
+                        <p>NGN {getCartAmount() === 0 ? 0 : 150}.00</p>
                     </div>
                     <hr />
                     <div className='totals'>
                         <span>Total</span>
-                        <b>${getCartAmount() === 0 ? 0 : getCartAmount() + 10}.00</b>
+                        <b>NGN {getCartAmount() === 0 ? 0 : getCartAmount() + 150}.00</b>
                     </div>
                     <button onClick={() => {
                         if (getCartAmount() === 0) {
