@@ -32,9 +32,10 @@
 
 .cart-detail-container {
     display: flex;
+    width: 100%;
     gap: 10px;
-    align-items: flex-start; /* Align items to the top */
-    justify-content: space-between; /* Space between children */
+    align-items: flex-start; 
+    justify-content: space-between;
 }
 
 .cart-detail {
@@ -44,9 +45,9 @@
     padding: 10px;
     border-radius: 8px;
     gap: 10px;
-    min-width: 200px;
+    /* min-width: 200px; */
     width: 100%;
-    flex-grow: 1; /* Allow this section to grow and take available space */
+    flex-grow: 1;
 }
 
 .detail-name {
