@@ -46,8 +46,9 @@ function Cart() {
                                         </p>
                                     </div>
                                 </div>
+                               
                                 <input type="number" min={1} defaultValue={p.quantity} onChange={(e) => e.target.value === "" || e.target.value === "0" ? null : updateQuantity(p._id, p.size, Number(e.target.value))} />
-                                
+                                    
                                 <img src={assets.bin_icon} alt="" className='del-btn' onClick={() => updateQuantity(p._id, p.size, 0)} />
                             </div>                           
                         </div>
