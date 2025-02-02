@@ -10,14 +10,9 @@
     padding: 10px 0;
 }
 
-.cart-container {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 15px;
-    width: 100%;
-  }
+
 .cart-detail.container{
-    flex-grow: 1;
+    margin: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  
 }  
   .cart-details {
