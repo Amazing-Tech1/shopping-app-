@@ -4,7 +4,7 @@ import axios from "../axios";
 import { toast } from "react-toastify";
 import { useLocation, useNavigate } from 'react-router-dom'
 
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,24}$/;
+// const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,24}$/;
 
 
 export const AuthContext = createContext()
@@ -127,8 +127,8 @@ function AuthProvider({ children }) {
                 withCredentials: true
             })
             if (response.data.logout) {
-                console.log(response.data)
-                toast.success('Happy Shopping')
+                // console.log(response.data)
+                toast.success('Logged Out Successfully')
                 setIsAuth(false)
                 localStorage.removeItem('isAuth')
                 navigate('/')

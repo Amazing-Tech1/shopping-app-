@@ -45,7 +45,10 @@ function Navbar() {
                                             navigate('/orders');
                                             setIsVisible(false);
                                         }}>Orders</p>
-                                        <p onClick={handleUserLogout}>Logout</p>
+                                        <p onClick={() => {
+                                            handleUserLogout();
+                                            setIsVisible(false);
+                                        }}>Logout</p>
                                     </div> :
                                     null
                                 }
