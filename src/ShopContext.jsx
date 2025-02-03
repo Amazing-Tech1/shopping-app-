@@ -225,7 +225,7 @@ function ShopContextProvider({ children }) {
 
             })
             setProducts(response.data)
-            console.log(response.data)
+            // console.log(response.data)
         } catch (err) {
             console.log(err.response.data)
         }

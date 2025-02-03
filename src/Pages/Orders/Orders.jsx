@@ -27,14 +27,14 @@ function Orders() {
                         allOrdersItem.push(item)
                     })
                 })
-                console.log(allOrdersItem)
+                // console.log(allOrdersItem)
                 setOrderData(allOrdersItem.reverse())
             }
             else {
-                console.log("Expected 'orders' to be an array, but it was not.");
+                console.log("Trouble getting your orders");
             }
         } catch (error) {
-
+            console.log(err.response.data)
         }
     }
     useEffect(() => {
