@@ -33,8 +33,8 @@ function Login() {
                 return;
             }
             try {
-                console.log('register is executed')
-                console.log(currState)
+                // console.log('register is executed')
+                // console.log(currState)
                 const response = await axios.post('/register', { username, email, password }, {
                     headers: {
                         'Content-Type': 'application/json'
@@ -42,13 +42,10 @@ function Login() {
                     withCredentials: true
                 })
                 if (response.data.success) {
-                    toast.success(`Welcome ${username}`)
-                    setIsAuth(true)
-                    localStorage.setItem('isAuth', JSON.stringify(true))
+                    setCurrState("Login")
                     setName("")
                     setEmail("")
                     setPassword("")
-                    navigate(from, { replace: true })
                 }
             } catch (err) {
                 if (!err?.response) {
@@ -67,7 +64,7 @@ function Login() {
         }
         if (currState === "Login") {
             try {
-                console.log('login is executed')
+                // console.log('login is executed')
                 const response = await axios.post('/login', { email, password }, {
                     headers: {
                         'Content-Type': 'application/json'
@@ -75,7 +72,7 @@ function Login() {
                     withCredentials: true
                 })
                 if (response.data.success) {
-                    toast.success(`Welcome ${email}`)
+                    toast.success('Hello Welcome')
                     setIsAuth(true)
                     localStorage.setItem('isAuth', JSON.stringify(true))
                     setEmail("")

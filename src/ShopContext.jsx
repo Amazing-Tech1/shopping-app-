@@ -161,12 +161,12 @@ function ShopContextProvider({ children }) {
             })
             if (response.data.success) {
                 setCartItems(response.data.cartData)
-                console.log(response.data.cartData)
+                // console.log(response.data.cartData)
             }
 
         } catch (err) {
             console.log(err)
-            toast.error(err.message)
+            toast.error('Something went Wrong!')
         }
 
     }
